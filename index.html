@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC>
+
+<html>
+
+<!-- RASPBERRY SORBET | THEME BY BONES | NUCLEARSTORMS -->
+
+<!--
+
+>> CREDITS
+
+• Custom tooltips by Atomiks >> https://atomiks.github.io/tippyjs/
+• Fonts from Google >> https://fonts.google.com/
+• Icons from Phosphor >> https://phosphoricons.com/
+• Isotope filtering by magnusthemes >> https://magnusthemes.tumblr.com/
+• Placeholders from Pinterest, sorry :(
+• Tumblr controls fix by seyche >> https://seyche.tumblr.com/
+
+>> ADDITIONAL NOTES
+
+• Check the Phosphor Icons site for more icons if you would like to add your own!
+• Image sizes: 160x153 for the bigger picture, 90x75 for the smaller pictures.
+• Only the first character item has comments to help you out, but they're all structured the same. Refer back to the first character if you get stuck on customization!
+• If you need any help, feel free to send me a DM or an ask off anon! Anon asks will be ignored.
+
+>> KNOWN ISSUES & QUICK FIXES
+
+• When first loading the page, there is no filter selected, not even the "show all" filter. There is currently no fix for this.
+• The picture in the header is your icon and should link automatically, like all the other information put between {curly brackets}. If you want to add your own image instead, replace the {PortraitURL-128} in the image source with your own link!
+• There is no space for custom links, but feel free to replace any of the existing links with your own! You can add more, but this might mess up the layout.
+
+-->
+ 
+<head>
+ 
+<title>seanchas / muse list</title> <!-- page title -->
+
+<link rel="shortcut icon" href="https://img.nickpic.host/6ktOPb.jpg">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- fonts -->
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i|Raleway:400,400i,700,700i|Rubik:400,400i,700,700i" rel="stylesheet">
+
+<!-- icons -->
+
+<script src="https://unpkg.com/phosphor-icons"></script>
+
+<style type="text/css">
+
+* {margin:0; padding:0;}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------- MAIN CUSTOMIZATION -------------------------- */
+/* ----------- customize colors, fonts, sizes and other here! ------------ */
+/* ----------------------------------------------------------------------- */
+
+:root {
+    --background: #fbf9f9;
+    --bg-accent: #f1ebeb;
+    --text: #1a0d0f;
+    --accent-1: #ff5e57;
+    --accent-2: #29ffff;
+    
+    --font-size: 14px;
+    
+    --border-radius: 8px;
+    
+    --font-text: Rubik;             /* regular text */
+    --font-titles: Raleway;         /* titles */
+    --font-special: Poppins;        /* menu links, tooltips */
+    
+    --controls-color: #ff5e57;      /* tumblr controls icon color */
+    --invert-filter: 5%;            /* tumblr controls color */
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------- custom tooltips --------------------------- */
+/* ----------------------------------------------------------------------- */
+
+.tippy-tooltip.custom-theme {
+    background-color: var(--accent-2);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    font-family: var(--font-special);
+    font-size: 0.9em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------- custom selection & scrollbar --------------------- */
+/* ----------------------------------------------------------------------- */
+
+::-moz-selection {background: var(--bg-accent); color: var(--accent-1);}
+::selection {background: var(--bg-accent); color: var(--accent-1);}
+
+::-webkit-scrollbar-thumb 
+{background: var(--accent-2);}
+::-webkit-scrollbar-track 
+{background: var(--bg-accent); border: 3px solid var(--background);}
+::-webkit-scrollbar 
+{width: 7px;}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- page layout ----------------------------- */
+/* ----------------------------------------------------------------------- */
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-text);
+    font-size: var(--font-size);
+    letter-spacing: 0.5px;
+    line-height: 170%;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+#container {margin: 40px auto; width: 830px;}
+i {font-size: 24px!important; line-height: 170%;}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- header -------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+#header img {border-radius: 100%; height: 75px; width: 75px;}
+#h-title {margin-bottom: 10px; margin-top: 10px;}
+#h-info {margin-bottom: 12px; opacity: 0.4;}
+#header {text-align: center;}
+
+#h-links {
+    display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 210px;
+}
+
+#h-links a {
+    background-color: var(--accent-2);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    font-family: var(--font-special);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 2px 7px;
+    text-transform: uppercase;
+}
+
+#h-links a:hover {
+    background-color: var(--text);
+    color: var(--accent-2);
+    font-size: 0.9em;
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------------- btns -------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+#btncontainer {
+    line-height: 250%;
+    margin: 15px auto 20px auto;
+    text-align: center;
+}
+
+.btn {
+    color: var(--text);
+    padding-bottom: 7px;
+    text-transform: uppercase;
+}
+
+.space {margin-left: 25px;}
+li {display: inline; list-style-type: none;}
+.btn:hover, .selected {border-bottom: 4px solid var(--text);}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- content ------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+.item {height: 209px; margin: 0 23px 25px 23px; width: 160px;}
+.i-wrap {float: right; height: 153px; width: 90px;}
+.i-container {height: 153px; width: 253px;}
+.i-name {padding: 5px 5px 2px 5px;}
+
+.i-one {
+    float: left;
+    height: 153px;
+    width: 160px;
+}
+
+.i-two {
+    border-radius: 0 var(--border-radius) 0 0;
+    height: 75px;
+    margin-bottom: 3px;
+    width: 90px;
+}
+
+.i-three {
+    border-radius: 0 0 var(--border-radius) 0;
+    height: 75px;
+    width: 90px;
+}
+
+.i-info {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 5px;
+    opacity: 0.3;
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- text --------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+h1 {
+    color: var(--accent-1);
+    font-family: var(--font-titles);
+    font-size: 2.2em;
+}
+
+h2 {
+    font-family: var(--font-titles);
+    font-size: 1.5em;
+}
+
+.content a:hover {
+    color: var(--accent-2); 
+}
+
+a {color: var(--text); text-decoration: none;}
+
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- transitions ------------------------------ */
+/* ----------------------------------------------------------------------- */
+
+#btncontainer, .btn, .selected {
+    transition: 0s!important;
+    -moz-transition: 0s!important;
+    -ms-transition: 0s!important;
+    -o-transition: 0s!important;
+    -webkit-transition: 0s!important;
+}
+
+a, a:hover, .tmblr-iframe, .tmblr-iframe:hover, #container {
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+
+#credit, #credit:hover {
+    transition: 0.8s ease-out;
+    -moz-transition: 0.8s ease-out;
+    -ms-transition: 0.8s ease-out;
+    -o-transition: 0.8s ease-out;
+    -webkit-transition: 0.8s ease-out;
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- credits ------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+#credit {
+    color: var(--accent-1);
+    bottom: 0;
+    font-size: 20px;
+    font-style: italic;
+    margin: 10px;
+    padding: 10px 0px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 40px;
+}
+
+#credit:hover {
+    transform: rotate(360deg) scale(1.5);
+    -moz-transform: rotate(360deg) scale(1.5);
+    -ms-transform: rotate(360deg) scale(1.5);
+    -o-transform: rotate(360deg) scale(1.5);
+    -webkit-transform: rotate(360deg) scale(1.5);
+}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- responsive ------------------------------ */
+/* ----------------------------------------------------------------------- */
+
+@media only screen and (max-width: 975px){#container {width: 620px;}}
+@media only screen and (max-width: 675px){#container {width: 415px;}}
+
+</style>
+    
+</head>
+
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------- HEAD & BODY DIVIDER --------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+
+<body>
+
+<!--------------------------- START MAIN CONTENT---------------------------->
+
+<div id="container">
+
+<!-- header -->
+
+<div id="header">
+    
+    <div id="h-title"><h1>Muse List.</h1></div> <!-- header title -->
+    
+  <div id="h-info">@seanchas • beetle • 27 • he/him</div> <!-- header info -->
+    
+    <!-- header links: already linked, but feel free to change! -->
+    
+    <div id="h-links">
+        <a href="https://seanchas.tumblr.com/">home.</a>
+        <a href="https://seanchas.tumblr.com/ask">ask.</a>
+        <a href="https://seanchas.tumblr.com/archive">archive.</a>
+    </div>
+    
+</div>
+
+<!-- buttons -->
+
+<div id="btncontainer">
+
+    <ul class="filter option-set exclusive" data-filter-group="group1">
+    
+        <!-- show all button; don't touch :P -->
+    
+        <li><a class="btn" href="#" data-filter-value="" class="selected">
+            all media
+        </a></li>
+        
+        <span class="space"></span> <!-- space between buttons -->
+        
+        <!-- filter 1 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".animanga">animanga</a></li>
+        
+        <span class="space"></span> <!-- space between buttons -->
+        
+        <!-- filter 2 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".comics">comics</a></li> 
+        
+        <span class="space"></span> <!-- space between buttons -->
+        
+        <!-- filter 3 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".literature">literature</a></li>
+        
+        <span class="space"></span>
+        
+        <!-- filter 4 -->
+      
+        <li><a class="btn" href="#" data-filter-value=".games">videogames</a></li>
+        
+    </ul>
+  
+      <ul class="filter option-set exclusive" data-filter-group="group2">
+    
+        <!-- show all button; don't touch :P -->
+    
+        <li><a class="btn" href="#" data-filter-value="" class="selected">
+            all fandoms
+        </a></li>
+        
+        <span class="space"></span> <!-- space between buttons -->
+        
+        <!-- filter 1 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".dc">DC</a></li>
+        
+        <span class="space"></span> <!-- space between buttons -->
+        
+        <!-- filter 1 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".boruto">boruto</a></li>
+        
+        <span class="space"></span> <!-- space between buttons -->
+        
+        <!-- filter 2 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".howl">howl's moving castle</a></li> 
+        
+        <span class="space"></span> <!-- space between buttons -->
+        
+        <!-- filter 3 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".marvel">marvel</a></li>
+        
+        <span class="space"></span>
+        
+        <!-- filter 3 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".naruto">naruto</a></li>
+        
+        <span class="space"></span>
+        
+        <!-- filter 3 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".trigun">trigun</a></li>
+        
+        <span class="space"></span>
+        
+        <!-- filter 3 -->
+        
+        <li><a class="btn" href="#" data-filter-value=".warframe">warframe</a></li>
+        
+        <span class="space"></span>
+        
+        <!-- filter 4 -->
+      
+        <li><a class="btn" href="#" data-filter-value=".ygo">yu-gi-oh!</a></li>
+        
+    </ul>
+    
+</div>
+
+<!-- content -->
+
+<div class="content">
+
+    <!-- item -->
+    
+    <div class="item comics dc"> <!-- add your filter tags here! -->
+    
+        <!-- images -->
+        
+        <div class="i-container">
+        
+            <!-- image 1 -->
+            
+            <img class="i-one" src="https://i.imgur.com/arPEvJs.png"/>
+            
+        </div>
+        
+        <!-- character name; change "#" to a link if you'd like! -->
+        
+        <div class="i-name"><h2>
+            <a href="#">Duela<br/> Dent</a>
+        </h2></div>
+        
+        <!-- character info -->
+        
+        <div class="i-info">dc comics • new earth</div>
+        
+    </div>
+    
+    <!-- item -->
+    
+    <div class="item comics dc">
+        
+        <div class="i-container">
+            
+            <img class="i-one" src="https://i.imgur.com/ymTAK9v.png"/>
+            
+        </div>
+        
+        <div class="i-name"><h2>
+            <a href="#">Eddie Bloomberg</a>
+        </h2></div>
+        
+        <div class="i-info">dc comics • new earth</div>
+        
+    </div>
+    
+    <!-- item -->
+    
+    <div class="item Edward Nashton">
+        
+        <div class="i-container">
+            
+            <img class="i-one" src="https://i.imgur.com/RaN0EKP.png"/>
+            
+        </div>
+        
+        <div class="i-name"><h2>
+            <a href="#">Edward Nashton</a>
+        </h2></div>
+        
+        <div class="i-info">dc comics • anti-earth</div>
+        
+    </div>
+    
+    <!-- item -->
+    
+    <div class="item comics marvel">
+        
+        <div class="i-container">
+            
+            <img class="i-one" src="https://i.imgur.com/okRJHrX.png"/>
+            
+        </div>
+        
+        <div class="i-name"><h2>
+            <a href="#">Frank Schlichting</a>
+        </h2></div>
+        
+        <div class="i-info">marvel • earth-616</div>
+        
+    </div>
+    
+    <!-- item -->
+    
+    <div class="item comics dc">
+        
+        <div class="i-container">
+            
+            <img class="i-one" src="https://i.imgur.com/zl8DwuA.png"/>
+            
+        </div>
+        
+        <div class="i-name"><h2>
+            <a href="#">Hartley Rathaway</a>
+        </h2></div>
+        
+        <div class="i-info">dc comics • new earth</div>
+        
+    </div>
+    
+    <!-- item -->
+    
+    <div class="item one animanga naruto">
+        
+        <div class="i-container">
+            
+            <img class="i-one" src="https://i.imgur.com/okRJHrX.png"/>
+            
+        </div>
+        
+        <div class="i-name"><h2>
+            <a href="#">Hoshigaki Kisame</a>
+        </h2></div>
+        
+        <div class="i-info">naruto • manga</div>
+        
+    </div>
+    
+    <!-- item -->
+  
+    <div class="item literature howl">
+        
+        <div class="i-container">
+            
+            <img class="i-one" src="https://i.imgur.com/zl8DwuA.png"/>
+            
+        </div>
+        
+        <div class="i-name"><h2>
+            <a href="#">Howl Pendragon</a>
+        </h2></div>
+        
+        <div class="i-info">hmc • book</div>
+        
+    </div>  
+  
+  
+  
+  
+  
+  
+  
+  
+    <!-- copy and paste the code below for a new character! -->
+    
+    <!--
+  
+    <div class="item one">
+        
+        <div class="i-container">
+            
+            <img class="i-one" src="https://i.imgur.com/zl8DwuA.png"/>
+            
+        </div>
+        
+        <div class="i-name"><h2>
+            <a href="#">Character Name.</a>
+        </h2></div>
+        
+        <div class="i-info">00 years old • pron/pron</div>
+        
+    </div>
+    
+    -->
+    
+    <!-- STOP HERE -->
+    
+</div>
+
+</div>
+
+<!---------------------------- END MAIN CONTENT----------------------------->
+
+<!-- don't edit beyond this point please! colors can be modified in <style> -->
+
+<a id="credit" target="blank" title="by bones" href="https://nuclearstorms.tumblr.com/"><i class="ph-skull-fill"></i></a>
+
+<!-- tooltips -->
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css" />
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/animations/shift-away-subtle.css"/>
+
+<!-- filtering -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+    // filtering
+    
+    $(document).ready(function() {
+        var $container = $(".content");
+        var filters = {};
+        var $grid = $container.isotope({
+            itemSelector: ".item",
+            percentPosition: false
+        });
+        
+        $(".option-set a").click(function(e) {
+            var $this = $(this);
+            var filterAttr = "data-filter-value";
+            var filterValue = $this.attr(filterAttr);
+            var $optionSet = $this.parents(".option-set");
+            var group = $optionSet.attr("data-filter-group");
+            var filterGroup = filters[group];
+            
+            if (!filterGroup) {
+                filterGroup = filters[group] = [];
+            }
+            
+            var $selectAll = $optionSet.find('a['+filterAttr+'=""]');
+            var activeClass = "selected",
+            exclClass = "exclusive";
+            comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+            var comboFilter = getComboFilter(filters);
+            
+            $grid.isotope({
+                filter: comboFilter
+            });
+            
+            $this.toggleClass(activeClass);
+            e.preventDefault();
+        });
+    });
+
+    // tooltips
+
+    tippy('[title]', {
+        theme: 'custom',
+        animation: 'shift-away-subtle',
+        arrow: false,
+        delay: [50, 150],
+        placement: 'right',
+        zIndex: 9999999999,
+        maxWidth: 300,
+
+        content(reference) {
+            const title = reference.getAttribute('title');
+            reference.removeAttribute('title');
+            return title;
+        },
+    });
+</script>
+
+</body>
+
+</html>
