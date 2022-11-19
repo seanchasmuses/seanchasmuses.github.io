@@ -1,0 +1,188 @@
+* {margin:0; padding:0;}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------- MAIN CUSTOMIZATION -------------------------- */
+/* ----------- customize colors, fonts, sizes and other here! ------------ */
+/* ----------------------------------------------------------------------- */
+
+:root {
+    --background: #fbf9f9;
+    --bg-accent: #bb7ec3;
+    --text: #1a0d0f;
+    --accent-1: #bb7ec3;
+    --accent-2: #bb7ec3;
+    
+    --font-size: 14px;
+    
+    --border-radius: 8px;
+    
+    --font-text: Rubik;             /* regular text */
+    --font-titles: Raleway;         /* titles */
+    --font-special: Poppins;        /* menu links, tooltips */
+    
+    --controls-color: #ff5e57;      /* tumblr controls icon color */
+    --invert-filter: 5%;            /* tumblr controls color */
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------- custom tooltips --------------------------- */
+/* ----------------------------------------------------------------------- */
+
+.tippy-tooltip.custom-theme {
+    background-color: var(--accent-2);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    font-family: var(--font-special);
+    font-size: 0.9em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------- custom selection & scrollbar --------------------- */
+/* ----------------------------------------------------------------------- */
+
+::-moz-selection {background: var(--bg-accent); color: var(--accent-1);}
+::selection {background: var(--bg-accent); color: var(--accent-1);}
+
+::-webkit-scrollbar-thumb 
+{background: var(--accent-2);}
+::-webkit-scrollbar-track 
+{background: var(--bg-accent); border: 3px solid var(--background);}
+::-webkit-scrollbar 
+{width: 7px;}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- page layout ----------------------------- */
+/* ----------------------------------------------------------------------- */
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-text);
+    font-size: var(--font-size);
+    letter-spacing: 0.5px;
+    line-height: 170%;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+#container {margin: 40px auto; max-width: 750px;min-width:350px;padding:40px;}
+b {color:var(--accent-1);}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- header -------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+#header img {border-radius: 100%; height: 75px; width: 75px;}
+#h-title {margin-bottom: 10px; margin-top: 10px;}
+#h-info {margin-bottom: 12px; opacity: 0.4;}
+#header {text-align: center;}
+
+#h-links {
+    display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 210px;
+}
+
+#h-links a {
+    background-color: var(--accent-2);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    font-family: var(--font-special);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 2px 7px;
+    text-transform: uppercase;
+}
+
+#h-links a:hover {
+    background-color: var(--text);
+    color: var(--accent-2);
+    font-size: 0.9em;
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------------- btns -------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+#btncontainer {
+    line-height: 250%;
+    margin: 15px auto 20px auto;
+    text-align: center;
+}
+
+.btn {
+    color: var(--text);
+    padding-bottom: 7px;
+    text-transform: uppercase;
+    font-size:10px!important;
+}
+
+.space {margin-left: 25px;}
+li {display: inline; list-style-type: none;}
+.btn:hover, .selected {border-bottom: 4px solid var(--text);}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- text --------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+h1 {
+    color: var(--accent-1);
+    font-family: var(--font-titles);
+    font-size: 2.2em;
+}
+
+h2 {
+    color: #967c99;
+    font-family: var(--font-titles);
+    font-size: 1.5em;
+}
+
+.content a:hover {
+    color: var(--accent-2); 
+}
+
+a {color: var(--text); text-decoration: none;}
+
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- transitions ------------------------------ */
+/* ----------------------------------------------------------------------- */
+
+#btncontainer, .btn, .selected {
+    transition: 0s!important;
+    -moz-transition: 0s!important;
+    -ms-transition: 0s!important;
+    -o-transition: 0s!important;
+    -webkit-transition: 0s!important;
+}
+
+a, a:hover, #container {
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+
+/* Muse Page Styling */
+  .content {line-height:150%;margin-top:40px;}
+  .content p {margin:15px 0;}
+  .content h1 {margin:25px 0;}
+  .quick-box {
+    display:flex;
+    margin-bottom:-5px;
+  }
+
+  .char-avatar img {
+    border-radius:25px;
+    margin-right:15px;
+    height:145px;
+  }
+
+  .quick-box i {font-size:11px;}
