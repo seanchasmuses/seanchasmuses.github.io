@@ -11,22 +11,9 @@
 • Custom tooltips by Atomiks >> https://atomiks.github.io/tippyjs/
 • Fonts from Google >> https://fonts.google.com/
 • Icons from Phosphor >> https://phosphoricons.com/
-• Isotope filtering by magnusthemes >> https://magnusthemes.tumblr.com/
-• Placeholders from Pinterest, sorry :(
-• Tumblr controls fix by seyche >> https://seyche.tumblr.com/
+• Header Code by Bones >> https://nuclearstorms.tumblr.com/
 
->> ADDITIONAL NOTES
-
-• Check the Phosphor Icons site for more icons if you would like to add your own!
-• Image sizes: 160x153 for the bigger picture, 90x75 for the smaller pictures.
-• Only the first character item has comments to help you out, but they're all structured the same. Refer back to the first character if you get stuck on customization!
-• If you need any help, feel free to send me a DM or an ask off anon! Anon asks will be ignored.
-
->> KNOWN ISSUES & QUICK FIXES
-
-• When first loading the page, there is no filter selected, not even the "show all" filter. There is currently no fix for this.
-• The picture in the header is your icon and should link automatically, like all the other information put between {curly brackets}. If you want to add your own image instead, replace the {PortraitURL-128} in the image source with your own link!
-• There is no space for custom links, but feel free to replace any of the existing links with your own! You can add more, but this might mess up the layout.
+This page is a heavily edited version of Bones' Raspberry Sorbet theme that I use for my muse list. Which is to say that I kept a chunk of the CSS for visual consistency, and to keep the page header consistent across all pages.
 
 -->
  
@@ -49,12 +36,6 @@
 <link rel="stylesheet" href="character.css">
     
 </head>
-
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-<!-------------------------- HEAD & BODY DIVIDER --------------------------->
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
 
 <body>
 
@@ -576,69 +557,6 @@
 <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css" />
 <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/animations/shift-away-subtle.css"/>
-
-<!-- filtering -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
-
-<script>
-    // filtering
-    
-    $(document).ready(function() {
-        var $container = $(".content");
-        var filters = {};
-        var $grid = $container.isotope({
-            itemSelector: ".item",
-            percentPosition: false
-        });
-        
-        $(".option-set a").click(function(e) {
-            var $this = $(this);
-            var filterAttr = "data-filter-value";
-            var filterValue = $this.attr(filterAttr);
-            var $optionSet = $this.parents(".option-set");
-            var group = $optionSet.attr("data-filter-group");
-            var filterGroup = filters[group];
-            
-            if (!filterGroup) {
-                filterGroup = filters[group] = [];
-            }
-            
-            var $selectAll = $optionSet.find('a['+filterAttr+'=""]');
-            var activeClass = "selected",
-            exclClass = "exclusive";
-            comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
-            var comboFilter = getComboFilter(filters);
-            
-            $grid.isotope({
-                filter: comboFilter
-            });
-            
-            $this.toggleClass(activeClass);
-            e.preventDefault();
-        });
-    });
-
-    // tooltips
-
-    tippy('[title]', {
-        theme: 'custom',
-        animation: 'shift-away-subtle',
-        arrow: false,
-        delay: [50, 150],
-        placement: 'right',
-        zIndex: 9999999999,
-        maxWidth: 300,
-
-        content(reference) {
-            const title = reference.getAttribute('title');
-            reference.removeAttribute('title');
-            return title;
-        },
-    });
-</script>
 
 </body>
 
