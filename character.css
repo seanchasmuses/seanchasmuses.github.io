@@ -67,7 +67,7 @@ body {
     word-wrap: break-word;
 }
 
-#container {margin: 40px auto; max-width: 750px;min-width:350px;padding:40px;}
+#container {margin: 40px auto; max-width: 750px;min-width:415px;padding:40px;}
 b {color:var(--accent-1);}
 
 /* ----------------------------------------------------------------------- */
