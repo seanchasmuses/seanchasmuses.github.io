@@ -7,7 +7,7 @@
 
 :root {
     --background: #fbf9f9;
-    --bg-accent: #bb7ec3;
+    --bg-accent: #ccc;
     --text: #1a0d0f;
     --accent-1: #bb7ec3;
     --accent-2: #bb7ec3;
@@ -42,8 +42,8 @@
 /* -------------------- custom selection & scrollbar --------------------- */
 /* ----------------------------------------------------------------------- */
 
-::-moz-selection {background: var(--bg-accent); color: var(--accent-1);}
-::selection {background: var(--bg-accent); color: var(--accent-1);}
+::-moz-selection {background: var(--bg-accent);}
+::selection {background: var(--bg-accent);}
 
 ::-webkit-scrollbar-thumb 
 {background: var(--accent-2);}
@@ -67,7 +67,7 @@ body {
     word-wrap: break-word;
 }
 
-#container {margin: 40px auto; max-width: 750px;min-width:335px;padding:40px;}
+#container {margin: 40px auto; max-width: 750px;min-width:370px;padding:40px;}
 b {color:var(--accent-1);}
 
 /* ----------------------------------------------------------------------- */
@@ -178,7 +178,7 @@ a, a:hover, .tmblr-iframe, .tmblr-iframe:hover, #container {
 }
 
 /* Muse Page Styling */
-  .content {line-height:150%;margin-top:40px;}
+  .content {line-height:150%;margin-top:40px;font-size:14px;}
   .content p {margin:15px 0;}
   .content h1 {margin:25px 0;}
   .quick-box {
@@ -186,10 +186,11 @@ a, a:hover, .tmblr-iframe, .tmblr-iframe:hover, #container {
     margin-bottom:-5px;
   }
 
-  .char-avatar img {
+  .char-avatar {
     border-radius:25px;
     margin-right:15px;
     height:145px;
+    float:left;
   }
 
   .quick-box i {font-size:11px;}
