@@ -125,7 +125,7 @@ b {color:var(--accent-1);}
 }
 
 .space {margin-left: 25px;}
-li {display: inline; list-style-type: none;}
+#btncontainer li {display: inline; list-style-type: none;}
 .btn:hover, .selected {border-bottom: 4px solid var(--text);}
 
 /* ----------------------------------------------------------------------- */
